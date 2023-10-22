@@ -1,5 +1,7 @@
 const clock = document.querySelector("#clock");
+const cssClock = "clock";
 
+clock.classList.add(cssClock);
 
 function setTime(){
     const date = new Date();

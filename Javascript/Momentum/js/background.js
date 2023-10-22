@@ -1,3 +1,4 @@
+const bck_img = document.querySelector("#bck_img");
 const images = [
     "france.jpg",
     "galaxy.jpg",
@@ -5,9 +6,10 @@ const images = [
 ];
 
 const randImg = images[Math.floor(Math.random()*images.length)];
-
 const bgImg = document.createElement("img");
+const css = "back_img";
 
+// bck_img.classList.add(css);
 bgImg.src=`img/${randImg}`;
 
-document.body.append(bgImg);
+bck_img.append(bgImg);
