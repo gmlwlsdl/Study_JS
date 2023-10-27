@@ -4,32 +4,47 @@ const todoList = document.querySelector("#todo-list");
 
 let toDos = [];
 const TODOS_KEY = "todos";
+const before = "checkbox_unclick";
 
 function saveTodo() {
     localStorage.setItem(TODOS_KEY,JSON.stringify(toDos));
 }
 
+// 체크박스 표시 후 n초 뒤 li 삭제 시도
+// function wait(event) {
+//     setTimeout(deleteTodo(event),3000);
+// }
 
 function deleteTodo(event){
     const li = event.target.parentElement;
     console.log(li.id);
-    li.remove();
+    // li.remove();
     toDos = toDos.filter(todo => todo.id != parseInt(li.id));
+    saveTodo();
 }
 
 function paintTodo(newTodoObj) {
     const li = document.createElement("li");
     li.id = newTodoObj.id;
-    const span = document.createElement("span");
-    span.innerText = newTodoObj.text;
+    // const span = document.createElement("span");
+    // span.innerText = newTodoObj.text;
+    const label = document.createElement("label");
+    label.htmlFor=newTodoObj.id;
+    label.classList.add("list_label");
+    label.innerText = newTodoObj.text;
 
-    const button = document.createElement("button");
-    button.innerText = "😶‍🌫️";
+    const check = document.createElement("input");
+    check.id=newTodoObj.id;
+    check.setAttribute("type", "checkbox");
+    check.classList.add("before");
+    
+    // button.innerText = "😶‍🌫️";
 
-    button.addEventListener("click", deleteTodo);
-
-    li.appendChild(span);
-    li.appendChild(button);
+    check.addEventListener("click", deleteTodo);
+    
+    li.appendChild(check);
+    // li.appendChild(span);
+    li.appendChild(label);
     todoList.appendChild(li);
 }
 

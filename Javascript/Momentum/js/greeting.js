@@ -12,12 +12,13 @@ function submitLogin(event){
     const username=loginInput.value;
     loginForm.classList.add(Hidden_classname);
     localStorage.setItem(User,username);
-    console.log(username);
+    console.log(usernames);
     setUsername(username);
 }
 
 function setUsername(username){
     greeting.classList.remove(Hidden_classname);
+    greeting.classList.add("greeting");
     greeting.innerText = `Hello ${username}`;
 }
 

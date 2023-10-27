@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <title>Momentum</title>
 </head>
 <body>    
@@ -13,13 +14,19 @@
         <button>Log in</button>
     </form>
     <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-        <input type="text" placeholder="Write your To Do tasks" required>
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
+    <div class="todo">
+       <form id="todo-form" class="todo_form">
+        <input type="text" class="todo_input">
+        <label class="todo_label">Write your today's todo</label>
+        <span class="todo_span"></span>
+    </form> 
+    </div>
+    <div class="list">
+        <ul id="todo-list" class="ul_list"></ul>
+    </div>
+    <div id="quote" class="quote">
         <span></span>
-        <span></span>
+        <span class="quote_author"></span>
     </div>
     <div id="weather">
         <span></span>

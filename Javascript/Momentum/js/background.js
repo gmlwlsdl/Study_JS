@@ -1,8 +1,10 @@
 const bck_img = document.querySelector("#bck_img");
 const images = [
-    "france.jpg",
     "galaxy.jpg",
-    "hambrug.jpg"
+    "hambrug.jpg",
+    "landscape.jpg",
+    "mountains.jpg",
+    "winter.jpg"
 ];
 
 const randImg = images[Math.floor(Math.random()*images.length)];

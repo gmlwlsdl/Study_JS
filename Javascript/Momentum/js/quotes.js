@@ -48,4 +48,4 @@ const lengthOfArray = quotes.length;
 const todaysQuote = quotes[Math.floor(Math.random()*lengthOfArray)];
 
 quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+author.innerText = "\n" + todaysQuote.author;
