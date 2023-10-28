@@ -198,3 +198,23 @@ input[type='checkbox']:checked{
 input[type='checkbox']:checked:after{
     display: block;
 }
+
+.size {
+    width: 40px;
+    height: 40px;
+    z-index: 0;
+}
+
+.move {
+    display: flex;
+    align-items: center;
+}
+
+.temperature {
+    color: white;
+    margin-left: 30px;
+}
+
+.city {
+    color: white;
+}
