@@ -10,17 +10,14 @@ function saveTodo() {
     localStorage.setItem(TODOS_KEY,JSON.stringify(toDos));
 }
 
-// 체크박스 표시 후 n초 뒤 li 삭제 시도
-// function wait(event) {
-//     setTimeout(deleteTodo(event),3000);
-// }
-
 function deleteTodo(event){
     const li = event.target.parentElement;
     console.log(li.id);
-    // li.remove();
-    toDos = toDos.filter(todo => todo.id != parseInt(li.id));
-    saveTodo();
+    setTimeout(() => {
+        li.remove();
+        toDos = toDos.filter(todo => todo.id !== parseInt(li.id));
+        saveTodo();
+    }, 3000);
 }
 
 function paintTodo(newTodoObj) {
