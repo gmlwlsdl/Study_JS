@@ -23,8 +23,6 @@ function deleteTodo(event){
 function paintTodo(newTodoObj) {
     const li = document.createElement("li");
     li.id = newTodoObj.id;
-    // const span = document.createElement("span");
-    // span.innerText = newTodoObj.text;
     const label = document.createElement("label");
     label.htmlFor=newTodoObj.id;
     label.classList.add("list_label");
@@ -35,12 +33,10 @@ function paintTodo(newTodoObj) {
     check.setAttribute("type", "checkbox");
     check.classList.add("before");
     
-    // button.innerText = "😶‍🌫️";
 
     check.addEventListener("click", deleteTodo);
     
     li.appendChild(check);
-    // li.appendChild(span);
     li.appendChild(label);
     todoList.appendChild(li);
 }

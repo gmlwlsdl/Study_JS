@@ -145,7 +145,6 @@ img {
 }
 
 .list {
-    /* border: 1px solid white; */
     height: 200px;
     width: 400px;
     position: absolute;
@@ -167,7 +166,6 @@ input[type='checkbox'] {
     border-radius: 3px;
     border: 1px solid white;
     cursor: pointer;
-    /* display: flex; */
     align-items: center;
     justify-content: center;
 }
@@ -207,14 +205,19 @@ input[type='checkbox']:checked:after{
 
 .move {
     display: flex;
-    align-items: center;
+    position: absolute;
+    left: 1800px;
 }
 
 .temperature {
     color: white;
-    margin-left: 30px;
+    margin-left: 40px;
+    margin-top: 10px;
 }
 
 .city {
+    position: absolute;
+    margin-left: 1820px;
+    margin-top: 18px;
     color: white;
 }
